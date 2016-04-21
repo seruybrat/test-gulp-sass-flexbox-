@@ -1,0 +1,425 @@
+@import "reset"
+@import "vars"
+@import "fonts"
+body
+	font: 16px OpenSans, sans-serif
+	line-height: 1.5
+	@media screen and (max-width: 960px)
+		font-size: 14px
+	@media screen and (max-width: 680px)
+		font-size: 8px
+h1
+	font: 700 2.6em 'Raleway', sans-serif
+	color: #fff
+	text-transform: uppercase
+	letter-spacing: 40px
+	@media screen and (max-width: 540px)
+		font-size: 1.6em
+		letter-spacing: 5px
+h2
+	font: 800 1.4em 'Raleway', sans-serif
+	text-transform: uppercase
+	color: #2c2e37
+	text-align: center
+	&.white
+		color: #fff
+	@media screen and (max-width: 750px)
+		text-align: center !important
+h3
+	font: 800 1.2em 'Raleway', sans-serif
+	text-transform: uppercase
+	color: #2c2e37
+	text-align: center
+	padding-bottom: 25px
+h4
+	font: 700 1em 'Raleway', sans-serif
+	color: #2c2e37
+h5
+	font: 400 1em 'Raleway', sans-serif
+	text-transform: uppercase
+	color: #2c2e37
+p
+	font: 16px OpenSans, sans-serif
+	color: #949494
+	line-height: 1.5
+img
+	width: 100%
+	height: auto
+i.fa
+	font-size: 20px
+button
+	font: 800 0.8em 'Raleway', sans-serif
+	width: 130px
+	padding: 15px 0
+	text-transform: uppercase
+	color: #818181
+	border: 1px solid #e6e6e6
+	background-color: transparent
+	margin: 0 10px
+	+mt(.3s)
+	cursor: pointer
+	position: relative
+	overflow: hidden
+	&::after
+		content: ""
+		position: absolute
+		top: 0
+		left: -4px
+		bottom: 0
+		background-color: #FFF
+		box-shadow:  0px 0px 137px 14px rgba(255,255,255,1)
+		opacity: 0
+		width: 4px
+		+mt(.3s)
+	&:hover::after
+		opacity: .5
+		left: 100%
+	&.active
+		background-color: $btn
+		color: #fff
+		border: 1px solid $btn
+span.wave
+	width: 81px
+	height: 7px
+	display: block
+	background: url(../img/waves.png)
+	margin: 0 auto 35px
+	@media screen and (max-width: 960px)
+		margin: 0 auto 35px !important
+.page-width
+	max-width: 1140px
+	width: 80%
+	margin: 0 auto
+	@media screen and (max-width: 960px)
+		width: 100%
+
+header
+	min-height: 100vh
+	padding: 40px
+	box-sizing: border-box
+	background: url(../img/bg.jpg) no-repeat
+	background-position: top center
+	background-size: cover
+	display: flex
+	justify-content: space-between
+	@media screen and (max-width: 660px)
+		width: 100%
+		flex-wrap: wrap
+	.logo
+		width: 17px
+		height: 17px
+	.text-wrap
+		padding-bottom: 55px
+		align-self: center
+		text-align: center
+		@media screen and (max-width: 660px)
+			width: 100%
+			order: 1
+			flex-basis: 100%
+		span
+			display: inline-block
+			font: 800 0.8em 'Raleway', sans-serif
+			padding: 8px 10px
+			background-color: $btn
+			color: #fff
+			text-transform: uppercase
+			margin-bottom: 20px
+	.buttons-wrap
+		span
+			margin-left: 25px
+
+#team
+	.top-text-wrap
+		min-height: 350px
+		display: flex
+		align-items: center
+		justify-content: center
+		.top-text
+			text-align: center
+	.post
+		margin-bottom: 45px
+		.img-wrap
+			overflow: hidden
+			.img-eff
+				transform: rotate(0)
+				+mt(.5s)
+				&:hover
+					transform: rotate(-25deg)
+				img
+					display: inline-block
+					transform: scale(1)
+					+mt(.5s)
+					&:hover
+						transform: scale(1.8)
+		.text-wrap
+			padding: 30px 65px 0
+	.post-bottom
+		padding: 45px 85px 50px
+	.buttons-wrap
+		padding-bottom: 160px
+
+#projects
+	.blue-bg
+		background-color: #2c2e37
+	.top-text
+		padding-top: 120px
+		max-width: 550px
+		margin: 0 auto
+		p
+			padding: 30px 0
+	.buttons-wrap
+		padding-bottom: 310px
+		button
+			color: #fff
+	.slider-wrap
+		position: relative
+		top: -214px
+		@media screen and (max-width: 960px)
+			width: 85%
+			margin: 0 auto
+		@media screen and (max-width: 670px)
+			width: 70%
+		div
+			.img-wrap
+				width: 80%
+				@media screen and (max-width: 1100px)
+					width: 100%
+				img
+					display: block
+					+mt(1s)
+			.text-wrap
+			@media screen and (max-width: 750px)
+				text-align: center !important
+				padding: 45px 0 0px
+				+mt(2s)
+		.arrow
+			display: block
+			cursor: pointer
+			position: absolute
+			top: 40%
+		.next
+			right: -50px
+		.prev
+			left: -50px
+	.pagination
+		position: relative
+		+mt(.2s)
+		@media screen and (max-width: 750px)
+			display: none !important
+		&::before
+			content: ''
+			width: 50%
+			height: 1px
+			background-color: #c5c5c5
+			position: absolute
+			top: 50%
+			left: 0
+		span
+			display: inline-block
+			margin-left: 15px
+			font: 800 0.9em 'Raleway', sans-serif
+			color: #c5c5c5
+			cursor: pointer
+.slider-wrap
+	.output
+		margin-top: 40px
+		h2
+			text-align: left
+		p
+			padding: 25px 0 45px
+		span
+			font: italic 700 16px OpenSans, sans-serif
+			color: #949494
+			i
+				padding-right: 5px
+				color: #949494
+.owl-stage
+	margin: 0 auto
+.owl-item, .cloned
+	@media screen and (max-width: 950px)
+		left: 20%
+	@media screen and (max-width: 620px)
+		left: 40%
+	@media screen and (max-width: 450px)
+		left: 60%
+	img
+		transform: scale(.6)
+	.text-wrap
+		opacity: 0
+	.pagination
+		opacity: 0
+.owl-item.active.center
+	@media screen and (max-width: 950px)
+		left: 20%
+	@media screen and (max-width: 620px)
+		left: 40%
+	@media screen and (max-width: 450px)
+		left: 60%
+	img
+		transform: scale(1)
+		+mt(1s)
+	.text-wrap
+		opacity: 1
+	.pagination
+		opacity: 1
+.owl-stage
+	left: -287.5px
+i
+	color: #d3d3d3
+	cursor: pointer
+	+mt(.3s)
+	&:hover
+		color: #909090
+.owl-item
+	.text-wrap
+		display: none
+.owl-dot
+	display: inline-block
+	&.active
+		span
+			color: #6b6c73 !important
+
+#journal
+	position: relative
+	padding: 450px 0 40px
+	background-color: #fafafa
+	.layer
+		position: absolute
+		width: 60%
+		height: 100%
+		top: -90px
+		right: 0
+		bottom: 130px
+		background: url(../img/layer.jpg) no-repeat
+		background-size: cover
+		z-index: 0
+		@media screen and (max-width: 750px)
+			top: -300px
+			right: 0
+			left: 0
+			width: 100%
+	.top-text
+		position: relative
+		z-index: 1
+		@media screen and (max-width: 750px)
+			text-align: center
+		span
+			margin: 0
+		h2
+			padding: 35px 0 25px
+			text-align: left
+		p
+			padding-bottom: 25px
+	.img-wrap
+		z-index: 2
+		position: relative
+		@media screen and (max-width: 750px)
+			display: none
+
+#ourteam
+	padding-top: 130px
+	.img-wrap
+		position: relative
+		overflow: hidden
+		.effect
+			position: absolute
+			background-color: #fb423e
+			+mt(.2s)
+		.left
+			height: 0
+			width: 4px
+			left: 0
+			bottom: 0
+		.top
+			height: 4px
+			width: 0
+			left: 0
+			top: 0
+			transition-delay: .2s
+		.right
+			height: 0
+			width: 4px
+			top: 0
+			right: 0
+			transition-delay: .4s
+		.bottom
+			width: 0
+			height: 4px
+			bottom: 0
+			right: 0
+			transition-delay: .6s
+		&:hover
+			.left
+				height: 100%
+			.top
+				width: 100%
+			.right
+				height: 100%
+			.bottom
+				width: 100%
+
+	.top-text
+		padding-bottom: 60px
+	.text-wrap
+		h4
+			padding: 50px 0 13px
+		span.short-line
+			display: block
+			width: 30px
+			height: 2px
+			margin: 30px 0
+			background-color: #d1d1d1
+		i
+			color: #999999
+			padding: 37px 18px 65px 0
+
+#vector-items
+	display: flex
+	justify-content: space-between
+	padding: 65px 0 75px
+	.item
+		display: inline-block
+		i
+			font-size: 3em
+			color: #d1d1d1
+
+footer
+	padding-bottom: 76px
+	background-color: #2c2e37
+	.footer-inner
+		display: flex
+		justify-content: space-between
+		@media screen and (max-width: 825px)
+			flex-wrap: wrap
+		.logo
+			padding-top: 76px
+		.sections
+			padding-top: 76px
+			li
+				color: #fff
+				font-size: 0.9em
+				padding-bottom: 30px
+		.icons
+			padding-top: 76px
+			@media screen and (max-width: 825px)
+				order: 1
+				flex-basis: 100%
+				text-align: center
+			i
+				padding-right: 10px
+		.form
+			padding-top: 76px
+			p
+				color: #fff
+				span
+					text-transform: uppercase
+			input
+				border: 2px solid #42434b
+				padding: 10px 0 10px 18px
+				margin-top: 30px
+				background-color: transparent
+				color: #fff
+				background: url(../img/arrow.png) no-repeat center right
+				@media screen and (max-width: 825px)
+					width: 80%
+					margin: 20px auto
